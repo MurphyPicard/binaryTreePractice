@@ -24,21 +24,39 @@ namespace BinaryTreePractice
         {
             Node newNode = new Node();
             newNode.Data = data;
-            if (root = null)
+            if (root == null)
             {
                 root = newNode;
             }
             else
             {
-                // pause for now
+                Node current = root;
+                Node parent;
+                while (true)
+                {
+                    parent = current;
+                    if ( data < current.Data)
+                    {
+                        current = current.LeftChild;
+                        if (current == null)
+                        {
+                            parent.LeftChild = newNode;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        current = current.RightChild;
+                        if (current == null)
+                        {
+                            parent.RightChild = newNode;
+                            break;
+                        }
+                    }
+                }
             }
         }
     }
-
-
-
-
-
 
     class Program
     {
