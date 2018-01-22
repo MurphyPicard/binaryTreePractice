@@ -63,11 +63,17 @@ namespace BinaryTreePractice
         static void Main(string[] args)
         {
             var tree1 = new BinarySearchTree();
-            tree1.add(5);
-            tree1.add(3);
-            tree1.add(6);
-            tree1.add(4);
-            tree1.add(7);
+            tree1.add(50);
+            tree1.add(30);
+            tree1.add(60);
+            tree1.add(40);
+            tree1.add(70);
+            var name = "Ara";
+            Console.WriteLine(name + " Please type a number:  ");
+            Console.ReadLine();
+            Console.WriteLine("******************************");
+            Console.WriteLine( tree1 );
+            Console.WriteLine("******************************");
         }
     }
 
