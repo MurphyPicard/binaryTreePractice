@@ -62,7 +62,12 @@ namespace BinaryTreePractice
     {
         static void Main(string[] args)
         {
-            // initial commit
+            var tree1 = new BinarySearchTree();
+            tree1.add(5);
+            tree1.add(3);
+            tree1.add(6);
+            tree1.add(4);
+            tree1.add(7);
         }
     }
 
