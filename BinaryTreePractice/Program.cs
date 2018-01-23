@@ -40,7 +40,8 @@ namespace BinaryTreePractice
                     if ( data < current.Data)
                     {
                         current = current.LeftChild;
-                        //Console.WriteLine("this is current " + current.Data);
+                        
+                        // if no leftchild one will be created here
                         if (current == null)
                         {
                             parent.LeftChild = newNode;
@@ -51,7 +52,10 @@ namespace BinaryTreePractice
                     }
                     else
                     {
+
                         current = current.RightChild;
+
+                        // if no rightchild one will be created here
                         if (current == null)
                         {
                             parent.RightChild = newNode;
