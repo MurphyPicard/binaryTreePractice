@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BinaryTreePractice
 {
-
     public class Node
     {
         public int Data;
         public Node LeftChild;
         public Node RightChild;
     }
+
     public class BinarySearchTree
     {
         public Node root;
@@ -45,7 +45,7 @@ namespace BinaryTreePractice
                         {
                             parent.LeftChild = newNode;
                             Console.WriteLine("this is parent.LeftChild " + parent.LeftChild.Data);
-
+                            // if we create a left child we can break out of the loop
                             break;
                         }
                     }
@@ -56,6 +56,7 @@ namespace BinaryTreePractice
                         {
                             parent.RightChild = newNode;
                             Console.WriteLine("this is parent.RightChild " + parent.RightChild.Data);
+                            // if we create a right child we can break out of the loop
                             break;
                         }
                     }
@@ -79,11 +80,11 @@ namespace BinaryTreePractice
             Console.WriteLine("Please pick a number: ");
             int myNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("This is where your number is in the tree: ");
-
             tree1.add(myNumber);
-            
 
 
+
+            Console.WriteLine();
             Console.WriteLine("******************************");
             Console.WriteLine( "Program written by : " + names );
             Console.WriteLine("******************************");
