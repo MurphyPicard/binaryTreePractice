@@ -24,6 +24,8 @@ namespace BinaryTreePractice
         {
             Node newNode = new Node();
             newNode.Data = data;
+            Console.WriteLine("this is the input " + newNode.Data);
+
             if (root == null)
             {
                 root = newNode;
@@ -38,9 +40,12 @@ namespace BinaryTreePractice
                     if ( data < current.Data)
                     {
                         current = current.LeftChild;
+                        //Console.WriteLine("this is current " + current.Data);
                         if (current == null)
                         {
                             parent.LeftChild = newNode;
+                            Console.WriteLine("this is parent.LeftChild " + parent.LeftChild.Data);
+
                             break;
                         }
                     }
@@ -50,6 +55,7 @@ namespace BinaryTreePractice
                         if (current == null)
                         {
                             parent.RightChild = newNode;
+                            Console.WriteLine("this is parent.RightChild " + parent.RightChild.Data);
                             break;
                         }
                     }
@@ -68,11 +74,18 @@ namespace BinaryTreePractice
             tree1.add(60);
             tree1.add(40);
             tree1.add(70);
-            var name = "Ara";
-            Console.WriteLine(name + " Please type a number:  ");
-            Console.ReadLine();
+            var names = "Beatriz and Ara";
+
+            Console.WriteLine("Please pick a number: ");
+            int myNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("This is where your number is in the tree: ");
+
+            tree1.add(myNumber);
+            
+
+
             Console.WriteLine("******************************");
-            Console.WriteLine( tree1 );
+            Console.WriteLine( "Program written by : " + names );
             Console.WriteLine("******************************");
         }
     }
