@@ -24,7 +24,7 @@ namespace BinaryTreePractice
         {
             Node newNode = new Node();
             newNode.Data = data;
-            Console.WriteLine("this is the input " + newNode.Data);
+            Console.WriteLine("Dropping plinko node number " + newNode.Data + "... ");
 
             if (root == null)
             {
@@ -45,7 +45,7 @@ namespace BinaryTreePractice
                         if (current == null)
                         {
                             parent.LeftChild = newNode;
-                            Console.WriteLine("this is parent.LeftChild " + parent.LeftChild.Data);
+                            Console.WriteLine(parent.LeftChild.Data + " is the LeftChild of " + parent.Data);
                             // if we create a left child we can break out of the loop
                             break;
                         }
@@ -59,7 +59,7 @@ namespace BinaryTreePractice
                         if (current == null)
                         {
                             parent.RightChild = newNode;
-                            Console.WriteLine("this is parent.RightChild " + parent.RightChild.Data);
+                            Console.WriteLine( parent.RightChild.Data + " is the RightChild of " + parent.Data);
                             // if we create a right child we can break out of the loop
                             break;
                         }
@@ -83,7 +83,8 @@ namespace BinaryTreePractice
 
             Console.WriteLine("Please pick a number: ");
             int myNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("This is where your number is in the tree: ");
+            Console.WriteLine("You picked " + myNumber + "... ");
+            Console.WriteLine("I hope this works... ");
             tree1.add(myNumber);
 
 
