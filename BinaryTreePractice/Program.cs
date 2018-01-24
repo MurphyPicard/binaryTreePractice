@@ -8,6 +8,7 @@ namespace BinaryTreePractice
 {
     public class Node
     {
+        // each node is data with a leftchild and rightchild
         public int Data;
         public Node LeftChild;
         public Node RightChild;
@@ -18,33 +19,39 @@ namespace BinaryTreePractice
         public Node root;
         public BinarySearchTree()
         {
+            //making this a new tree
             root = null;
         }
         public void add(int data)
         {
+            // making a new node
             Node newNode = new Node();
             newNode.Data = data;
-            Console.WriteLine("Dropping plinko node number " + newNode.Data + "... ");
+            Console.WriteLine("Dropping plinko chip number " + newNode.Data + "... ");
 
             if (root == null)
             {
+                // make the first number the root
                 root = newNode;
             }
             else
             {
+
                 Node current = root;
                 Node parent;
                 while (true)
                 {
+                    // sets the current root to be the parent
                     parent = current;
                     if ( data < current.Data)
                     {
                         current = current.LeftChild;
                         
-                        // if no leftchild one will be created here
+                        // if no leftchild, one will be created here
                         if (current == null)
                         {
                             parent.LeftChild = newNode;
+                            Console.WriteLine("It worked!!! (whew)");
                             Console.WriteLine(parent.LeftChild.Data + " is the LeftChild of " + parent.Data);
                             // if we create a left child we can break out of the loop
                             break;
@@ -55,10 +62,11 @@ namespace BinaryTreePractice
 
                         current = current.RightChild;
 
-                        // if no rightchild one will be created here
+                        // if no rightchild, one will be created here
                         if (current == null)
                         {
                             parent.RightChild = newNode;
+                            Console.WriteLine("It worked!!! (whew)");
                             Console.WriteLine( parent.RightChild.Data + " is the RightChild of " + parent.Data);
                             // if we create a right child we can break out of the loop
                             break;
