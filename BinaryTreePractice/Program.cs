@@ -13,10 +13,10 @@ namespace BinaryTreePractice
         {
             var tree1 = new BinarySearchTree();
             tree1.add(50);
-            tree1.add(30);
-            tree1.add(60);
-            tree1.add(40);
-            tree1.add(70);
+            tree1.add(49);
+            tree1.add(48);
+            tree1.add(47);
+            tree1.add(46);
             var names = "Beatriz and Ara";
 
             Console.WriteLine("Please pick a number: ");
